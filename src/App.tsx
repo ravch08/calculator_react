@@ -40,11 +40,11 @@ function App() {
 				/>
 				<ButtonOperator
 					operator="DEL"
-					clickHandler={() => dispatch({ type: actionCreators.DELETE_DIGITS })}
+					clickHandler={() => dispatch({ type: actionCreators.DELETE_DIGITS, payload: null })}
 				/>
 				<ButtonOperator
 					operator="AC"
-					clickHandler={() => dispatch({ type: actionCreators.RESET_OUTPUT })}
+					clickHandler={() => dispatch({ type: actionCreators.RESET_OUTPUT, payload: null })}
 				/>
 				<ButtonNumber
 					value="7"
@@ -92,7 +92,7 @@ function App() {
 				/>
 				<ButtonOperator
 					operator="="
-					clickHandler={() => dispatch({ type: actionCreators.SHOW_OUTPUT })}
+					clickHandler={() => dispatch({ type: actionCreators.SHOW_OUTPUT, payload: null })}
 				/>
 			</Grid>
 		</Wrapper>

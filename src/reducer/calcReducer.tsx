@@ -1,4 +1,4 @@
-import { ActionProps, InitialStateProps } from "../types/types";
+import { ActionProps, EvaluateProps, InitialStateProps } from "../types/types";
 import { actionCreators, initialState } from "./actionCreators";
 
 export function calcReducer(state = initialState, action: ActionProps): InitialStateProps {
@@ -60,13 +60,13 @@ export function calcReducer(state = initialState, action: ActionProps): InitialS
 	}
 }
 
-function evaluateOutput({ currentOperand, previousOperand, operator }: InitialStateProps) {
+function evaluateOutput({ currentOperand, previousOperand, operator }: EvaluateProps) {
 	const prev = parseFloat(previousOperand);
 	const current = parseFloat(currentOperand);
 
 	if (!prev || !current) return "";
 
-	let output: number;
+	let output;
 
 	switch (operator) {
 		case "+":

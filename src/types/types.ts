@@ -1,6 +1,6 @@
 export type ActionProps = {
 	type: string;
-	payload?: string;
+	payload: string | null;
 };
 
 export type InitialStateProps = {
@@ -24,6 +24,8 @@ export type ScreenProps = {
 	operator: string | null;
 };
 
-export type EvaluateOutputProps = {
-	evaluateOutput: ({ currentOperand, previousOperand, operator }: InitialStateProps) => string;
+export type EvaluateProps = {
+	currentOperand: string;
+	previousOperand: string;
+	operator: string | null;
 };
